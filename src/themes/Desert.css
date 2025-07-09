@@ -1,0 +1,440 @@
+.desert-theme {
+position: absolute;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+overflow: hidden;
+background: linear-gradient(180deg, #ffe37a 0%, #ffb347 60%, #ff914d 100%);
+}
+
+.desert-sky {
+position: absolute;
+top: 0;
+left: 0;
+width: 100vw;
+height: 60vh;
+background: linear-gradient(180deg, #ffe37a 0%, #ffecb3 100%);
+z-index: 1;
+}
+
+.desert-sun {
+position: absolute;
+top: 6vh;
+left: 12vw;
+width: 120px;
+height: 120px;
+background: radial-gradient(circle, #fffde4 60%, #ffe37a 100%, #ffecb3 120%);
+border-radius: 50%;
+box-shadow: 0 0 120px 40px #fffde4cc;
+z-index: 2;
+animation: desertSunPulse 3s ease-in-out infinite alternate;
+/* Mesas (rock formations) */
+.desert-mesas {
+  position: absolute;
+  bottom: 24vh;
+  left: 0;
+  width: 100vw;
+  height: 30vh;
+  z-index: 3;
+  pointer-events: none;
+}
+.mesa {
+  position: absolute;
+  bottom: 0;
+  width: 16vw;
+  height: 24vh;
+  background: linear-gradient(180deg, #ffb347 60%, #ff914d 100%);
+  border-radius: 10% 10% 30% 30% / 30% 30% 60% 60%;
+  opacity: 0.7;
+}
+.mesa-1 {
+  left: 10vw;
+  height: 22vh;
+  width: 10vw;
+  background: linear-gradient(180deg, #ffb347 60%, #ff914d 100%);
+  clip-path: polygon(0 100%, 0 40%, 20% 10%, 40% 20%, 60% 0, 80% 30%, 100% 20%, 100% 100%);
+  z-index: 3;
+}
+.mesa-2 {
+  left: 60vw;
+  height: 26vh;
+  width: 13vw;
+  background: linear-gradient(180deg, #ffd580 60%, #ffb347 100%);
+  clip-path: polygon(0 100%, 0 30%, 30% 0, 60% 20%, 80% 10%, 100% 40%, 100% 100%);
+  z-index: 3;
+}
+.mesa-3 {
+  left: 35vw;
+  height: 18vh;
+  width: 8vw;
+  background: linear-gradient(180deg, #ffb347 60%, #ff914d 100%);
+  clip-path: polygon(0 100%, 0 50%, 30% 10%, 60% 30%, 100% 0, 100% 100%);
+  z-index: 3;
+}
+}
+
+@keyframes desertSunPulse {
+  0% {
+    box-shadow: 0 0 60px rgba(255, 99, 71, 0.7);
+    transform: scale(1);
+  }
+  100% {
+    box-shadow: 0 0 100px rgba(255, 99, 71, 0.9);
+    transform: scale(1.05);
+  }
+}
+
+.desert-dunes {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100vw;
+height: 40vh;
+z-index: 4;
+pointer-events: none;
+}
+
+.dune {
+  position: absolute;
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+.dune-1 {
+width: 60vw;
+height: 18vh;
+left: 0vw;
+background: linear-gradient(90deg, #ffb347 0%, #ff914d 100%);
+opacity: 0.8;
+z-index: 4;
+}
+
+.dune-2 {
+width: 50vw;
+height: 14vh;
+left: 30vw;
+background: linear-gradient(90deg, #ffd580 0%, #ffb347 100%);
+opacity: 0.7;
+z-index: 5;
+}
+
+.dune-3 {
+width: 40vw;
+height: 10vh;
+left: 55vw;
+background: linear-gradient(90deg, #ffecb3 0%, #ffd580 100%);
+opacity: 0.6;
+z-index: 6;
+.dune-4 {
+  width: 100vw;
+  height: 8vh;
+  left: 0vw;
+  background: linear-gradient(90deg, #ff914d 0%, #d2691e 100%);
+  opacity: 0.9;
+  z-index: 7;
+}
+.desert-cacti {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 30vh;
+  z-index: 8;
+  pointer-events: none;
+}
+.cactus {
+  position: absolute;
+  bottom: 0;
+  width: 36px;
+  height: 110px;
+  background: linear-gradient(180deg, #228b22 60%, #006400 100%);
+  border-radius: 20px 20px 30px 30px / 30px 30px 60px 60px;
+  box-shadow: 0 2px 8px #0002;
+}
+.cactus-1 {
+  left: 12vw;
+  height: 120px;
+  width: 36px;
+}
+.cactus-2 {
+  left: 32vw;
+  height: 90px;
+  width: 28px;
+}
+.cactus-3 {
+  left: 60vw;
+  height: 100px;
+  width: 32px;
+}
+/* Cactus arms */
+.cactus::before, .cactus::after {
+  content: '';
+  position: absolute;
+  background: linear-gradient(180deg, #228b22 60%, #006400 100%);
+  border-radius: 50px;
+}
+.cactus::before {
+  left: -18px;
+  top: 40px;
+  width: 18px;
+  height: 40px;
+  transform: rotate(-20deg);
+}
+.cactus::after {
+  right: -18px;
+  top: 30px;
+  width: 18px;
+  height: 40px;
+  transform: rotate(20deg);
+}
+.desert-grass {
+  position: absolute;
+  bottom: 0;
+  width: 60px;
+  height: 30px;
+  background: none;
+  z-index: 9;
+}
+.desert-grass-1 {
+  left: 22vw;
+}
+.desert-grass-2 {
+  left: 52vw;
+}
+.desert-grass::before, .desert-grass::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 4px;
+  height: 30px;
+  background: linear-gradient(180deg, #b8860b 60%, #deb887 100%);
+  border-radius: 2px;
+}
+.desert-grass::before {
+  left: 10px;
+  transform: rotate(-15deg);
+}
+.desert-grass::after {
+  left: 30px;
+  transform: rotate(15deg);
+}
+}
+
+.desert-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.sand-particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(222, 184, 135, 0.6);
+  border-radius: 50%;
+  animation: sandBlow 8s linear infinite;
+}
+
+.sand-particle:nth-child(odd) {
+  animation-duration: 6s;
+  background: rgba(205, 133, 63, 0.4);
+}
+
+.sand-particle:nth-child(3n) {
+  animation-duration: 10s;
+  background: rgba(244, 164, 96, 0.5);
+}
+
+@keyframes sandBlow {
+  0% {
+    transform: translateX(-100px) translateY(100vh);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100vw) translateY(-100px);
+    opacity: 0;
+  }
+}
+
+.cactus {
+  position: absolute;
+  bottom: 20%;
+  background: #228b22;
+  border-radius: 10px;
+}
+
+.cactus::before,
+.cactus::after {
+  content: "";
+  position: absolute;
+  background: #228b22;
+  border-radius: 8px;
+}
+
+.cactus-1 {
+  width: 20px;
+  height: 80px;
+  left: 15%;
+  animation: cactusWave 4s ease-in-out infinite;
+}
+
+.cactus-1::before {
+  width: 15px;
+  height: 30px;
+  top: 20px;
+  left: -12px;
+  border-radius: 8px 8px 8px 0;
+}
+
+.cactus-1::after {
+  width: 12px;
+  height: 25px;
+  top: 15px;
+  right: -10px;
+  border-radius: 8px 8px 0 8px;
+}
+
+.cactus-2 {
+  width: 25px;
+  height: 100px;
+  right: 25%;
+  animation: cactusWave 5s ease-in-out infinite reverse;
+}
+
+.cactus-2::before {
+  width: 18px;
+  height: 40px;
+  top: 30px;
+  left: -15px;
+  border-radius: 8px 8px 8px 0;
+}
+
+.cactus-2::after {
+  width: 15px;
+  height: 35px;
+  top: 25px;
+  right: -12px;
+  border-radius: 8px 8px 0 8px;
+}
+
+@keyframes cactusWave {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+/* Position sand particles randomly */
+.particle-0 {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+.particle-1 {
+  top: 30%;
+  left: 20%;
+  animation-delay: 0.5s;
+}
+.particle-2 {
+  top: 40%;
+  left: 30%;
+  animation-delay: 1s;
+}
+.particle-3 {
+  top: 50%;
+  left: 40%;
+  animation-delay: 1.5s;
+}
+.particle-4 {
+  top: 60%;
+  left: 50%;
+  animation-delay: 2s;
+}
+.particle-5 {
+  top: 25%;
+  left: 60%;
+  animation-delay: 2.5s;
+}
+.particle-6 {
+  top: 35%;
+  left: 70%;
+  animation-delay: 3s;
+}
+.particle-7 {
+  top: 45%;
+  left: 80%;
+  animation-delay: 3.5s;
+}
+.particle-8 {
+  top: 55%;
+  left: 90%;
+  animation-delay: 4s;
+}
+.particle-9 {
+  top: 15%;
+  left: 15%;
+  animation-delay: 4.5s;
+}
+.particle-10 {
+  top: 65%;
+  left: 25%;
+  animation-delay: 5s;
+}
+.particle-11 {
+  top: 75%;
+  left: 35%;
+  animation-delay: 5.5s;
+}
+.particle-12 {
+  top: 85%;
+  left: 45%;
+  animation-delay: 6s;
+}
+.particle-13 {
+  top: 95%;
+  left: 55%;
+  animation-delay: 6.5s;
+}
+.particle-14 {
+  top: 10%;
+  left: 65%;
+  animation-delay: 7s;
+}
+.particle-15 {
+  top: 80%;
+  left: 75%;
+  animation-delay: 7.5s;
+}
+.particle-16 {
+  top: 70%;
+  left: 85%;
+  animation-delay: 0.2s;
+}
+.particle-17 {
+  top: 90%;
+  left: 95%;
+  animation-delay: 0.7s;
+}
+.particle-18 {
+  top: 5%;
+  left: 5%;
+  animation-delay: 1.2s;
+}
+.particle-19 {
+  top: 100%;
+  left: 100%;
+  animation-delay: 1.7s;
+}

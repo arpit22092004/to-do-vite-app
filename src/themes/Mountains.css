@@ -1,0 +1,392 @@
+.mountains-bear {
+  position: absolute;
+  left: 38vw;
+  bottom: 18vh;
+  width: 60px;
+  height: 80px;
+  z-index: 12;
+  pointer-events: none;
+  animation: bearClimb 10s linear infinite;
+}
+@keyframes bearClimb {
+  0% { left: 38vw; bottom: 18vh; }
+  20% { left: 41vw; bottom: 22vh; }
+  40% { left: 44vw; bottom: 28vh; }
+  60% { left: 47vw; bottom: 34vh; }
+  80% { left: 50vw; bottom: 40vh; }
+  100% { left: 38vw; bottom: 18vh; }
+}
+
+.bear-body {
+  position: absolute;
+  left: 18px;
+  top: 30px;
+  width: 24px;
+  height: 36px;
+  background: #6d4c2b;
+  border-radius: 14px 14px 18px 18px / 18px 18px 24px 24px;
+  z-index: 1;
+}
+.bear-head {
+  position: absolute;
+  left: 2px;
+  top: -18px;
+  width: 20px;
+  height: 20px;
+  background: #6d4c2b;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 2px 0 0 #4e3217;
+}
+.bear-ear {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #4e3217;
+  border-radius: 50%;
+  top: -22px;
+  z-index: 3;
+}
+.bear-ear-left {
+  left: 0px;
+}
+.bear-ear-right {
+  left: 12px;
+}
+.bear-arm {
+  position: absolute;
+  width: 8px;
+  height: 18px;
+  background: #4e3217;
+  border-radius: 8px 8px 8px 8px / 10px 10px 8px 8px;
+  z-index: 2;
+}
+.bear-arm-left {
+  left: -6px;
+  top: 10px;
+  transform: rotate(-30deg);
+}
+.bear-arm-right {
+  left: 20px;
+  top: 10px;
+  transform: rotate(30deg);
+}
+.bear-leg {
+  position: absolute;
+  width: 8px;
+  height: 16px;
+  background: #4e3217;
+  border-radius: 8px 8px 8px 8px / 10px 10px 8px 8px;
+  z-index: 2;
+}
+.bear-leg-left {
+  left: 2px;
+  top: 28px;
+  transform: rotate(-10deg);
+}
+.bear-leg-right {
+  left: 14px;
+  top: 28px;
+  transform: rotate(10deg);
+}
+/* Mountains theme inspired by the provided reference */
+.mountains-theme {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, #b3e0ff 0%, #e6f7ff 100%);
+  overflow: hidden;
+}
+
+
+.mountains-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60vh;
+  background: linear-gradient(180deg, #b3e0ff 0%, #e6f7ff 100%);
+  z-index: 1;
+}
+
+/* Layered mountains for depth */
+.mountains-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  pointer-events: none;
+}
+.mountains-layer-back {
+  height: 32vh;
+  background: linear-gradient(180deg, #7da0b6 60%, #4d6a7b 100%);
+  clip-path: polygon(0 100%, 10% 80%, 20% 85%, 30% 70%, 40% 80%, 50% 60%, 60% 75%, 70% 65%, 80% 80%, 90% 70%, 100% 100%);
+  z-index: 2;
+  opacity: 0.7;
+}
+.mountains-layer-mid {
+  height: 28vh;
+  background: linear-gradient(180deg, #5e7c8a 60%, #35505a 100%);
+  clip-path: polygon(0 100%, 8% 85%, 18% 80%, 28% 65%, 38% 75%, 48% 60%, 58% 70%, 68% 60%, 78% 75%, 88% 65%, 100% 100%);
+  z-index: 3;
+  opacity: 0.8;
+}
+.mountains-layer-front {
+  height: 22vh;
+  background: linear-gradient(180deg, #3a5a40 60%, #588157 100%);
+  clip-path: polygon(0 100%, 12% 90%, 22% 95%, 32% 85%, 42% 98%, 52% 90%, 62% 97%, 72% 92%, 82% 99%, 92% 95%, 100% 100%);
+  z-index: 4;
+  opacity: 0.95;
+}
+
+.mountains-trees {
+  position: absolute;
+  left: 0;
+  bottom: 18vh;
+  width: 100vw;
+  height: 12vh;
+  z-index: 5;
+  pointer-events: none;
+}
+.mountains-trees::before,
+.mountains-trees::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 2vw;
+  height: 8vh;
+  background: linear-gradient(180deg, #35505a 60%, #2d3a3a 100%);
+  left: 15vw;
+  border-radius: 0 0 1vw 1vw;
+  box-shadow: 10vw 0 #35505a, 20vw 0 #2d3a3a, 30vw 0 #35505a, 40vw 0 #2d3a3a, 50vw 0 #35505a, 60vw 0 #2d3a3a, 70vw 0 #35505a, 80vw 0 #2d3a3a;
+}
+.mountains-bushes {
+  position: absolute;
+  left: 0;
+  bottom: 12vh;
+  width: 100vw;
+  height: 6vh;
+  z-index: 6;
+  pointer-events: none;
+}
+.mountains-bushes::before {
+  content: '';
+  position: absolute;
+  left: 10vw;
+  width: 8vw;
+  height: 6vh;
+  background: radial-gradient(circle at 60% 60%, #7bb661 70%, #588157 100%);
+  border-radius: 50%;
+  box-shadow: 20vw 0 #7bb661, 40vw 0 #588157, 60vw 0 #7bb661, 80vw 0 #588157;
+}
+.mountains-rocks {
+  position: absolute;
+  left: 0;
+  bottom: 8vh;
+  width: 100vw;
+  height: 4vh;
+  z-index: 7;
+  pointer-events: none;
+}
+.mountains-rocks::before {
+  content: '';
+  position: absolute;
+  left: 25vw;
+  width: 4vw;
+  height: 2vh;
+  background: radial-gradient(circle at 60% 60%, #b0b0b0 70%, #888 100%);
+  border-radius: 50%;
+  box-shadow: 10vw 0 #b0b0b0, 30vw 0 #888, 50vw 0 #b0b0b0, 70vw 0 #888;
+}
+
+.mountains-foreground {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 18vh;
+  background: linear-gradient(180deg, #a3c9a8 60%, #6a994e 100%);
+  clip-path: polygon(0 100%, 5% 80%, 15% 90%, 25% 85%, 35% 95%, 45% 80%, 55% 90%, 65% 85%, 75% 95%, 85% 80%, 95% 90%, 100% 100%);
+  z-index: 8;
+}
+
+
+.mountains-clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 30vh;
+  z-index: 9;
+  pointer-events: none;
+}
+.cloud {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+  opacity: 0.7;
+}
+.cloud-1 {
+  width: 100px;
+  height: 40px;
+  top: 10vh;
+  left: 10vw;
+  animation: cloudFloat1 20s ease-in-out infinite;
+}
+.cloud-2 {
+  width: 80px;
+  height: 30px;
+  top: 14vh;
+  left: 60vw;
+  animation: cloudFloat2 25s ease-in-out infinite;
+}
+.cloud-3 {
+  width: 120px;
+  height: 50px;
+  top: 6vh;
+  left: 35vw;
+  animation: cloudFloat3 30s ease-in-out infinite;
+}
+@keyframes cloudFloat1 {
+  0% { left: 10vw; }
+  50% { left: 30vw; }
+  100% { left: 10vw; }
+}
+@keyframes cloudFloat2 {
+  0% { left: 60vw; }
+  50% { left: 80vw; }
+  100% { left: 60vw; }
+}
+@keyframes cloudFloat3 {
+  0% { left: 35vw; }
+  50% { left: 55vw; }
+  100% { left: 35vw; }
+}
+
+
+.mountains-birds {
+  position: absolute;
+  top: 8vh;
+  left: 0;
+  width: 100vw;
+  height: 8vh;
+  z-index: 10;
+  pointer-events: none;
+}
+.bird {
+  position: absolute;
+  width: 32px;
+  height: 16px;
+  background: none;
+  left: 20vw;
+  top: 2vh;
+  animation: birdFly 12s linear infinite;
+}
+.bird-2 {
+  left: 40vw;
+  top: 4vh;
+  animation-delay: 3s;
+}
+.bird-3 {
+  left: 60vw;
+  top: 1vh;
+  animation-delay: 6s;
+}
+.bird::before, .bird::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 8px;
+  border-radius: 50% 50% 0 0;
+  background: #222;
+  top: 0;
+}
+.bird::before {
+  left: 0;
+  transform: rotate(-20deg);
+}
+.bird::after {
+  right: 0;
+  transform: rotate(20deg);
+}
+@keyframes birdFly {
+  0% { transform: translateX(0) scale(1) rotate(0deg); }
+  10% { transform: translateX(10vw) scale(1.1) rotate(-2deg); }
+  20% { transform: translateX(20vw) scale(1) rotate(2deg); }
+  30% { transform: translateX(30vw) scale(1.1) rotate(-2deg); }
+  40% { transform: translateX(40vw) scale(1) rotate(2deg); }
+  50% { transform: translateX(50vw) scale(1.1) rotate(-2deg); }
+  60% { transform: translateX(60vw) scale(1) rotate(2deg); }
+  70% { transform: translateX(70vw) scale(1.1) rotate(-2deg); }
+  80% { transform: translateX(80vw) scale(1) rotate(2deg); }
+  90% { transform: translateX(90vw) scale(1.1) rotate(-2deg); }
+  100% { transform: translateX(100vw) scale(1) rotate(0deg); }
+}
+
+.cloud-2::before {
+  width: 40px;
+  height: 40px;
+  top: -20px;
+  left: 15px;
+}
+
+.cloud-2::after {
+  width: 50px;
+  height: 30px;
+  top: -10px;
+  right: 15px;
+}
+
+.cloud-3 {
+  width: 120px;
+  height: 50px;
+  top: 15%;
+  left: 60%;
+  animation: cloudFloat3 30s ease-in-out infinite;
+}
+
+.cloud-3::before {
+  width: 60px;
+  height: 60px;
+  top: -30px;
+  left: 20px;
+}
+
+.cloud-3::after {
+  width: 70px;
+  height: 50px;
+  top: -20px;
+  right: 20px;
+}
+
+@keyframes cloudFloat1 {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+}
+
+@keyframes cloudFloat2 {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-40px);
+  }
+}
+
+@keyframes cloudFloat3 {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+}

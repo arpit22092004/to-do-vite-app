@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Default theme variables */
+  --primary-color: #4f46e5;
+  --secondary-color: #7c3aed;
+  --background-color: rgba(255, 255, 255, 0.95);
+  --surface-color: rgba(255, 255, 255, 0.9);
+  --text-color: #1f2937;
+  --text-secondary: #6b7280;
+  --border-color: #e5e7eb;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --border-radius: 12px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Theme-specific variables */
+[data-theme="mountains"] {
+  --primary-color: #059669;
+  --secondary-color: #0d9488;
+  --background-color: rgba(255, 255, 255, 0.95);
+  --surface-color: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="desert"] {
+  --primary-color: #ea580c;
+  --secondary-color: #dc2626;
+  --background-color: rgba(255, 251, 235, 0.95);
+  --surface-color: rgba(255, 251, 235, 0.9);
+}
+
+[data-theme="aurora"] {
+  --primary-color: #8b5cf6;
+  --secondary-color: #06b6d4;
+  --background-color: rgba(15, 23, 42, 0.95);
+  --surface-color: rgba(30, 41, 59, 0.9);
+  --text-color: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --border-color: #475569;
+}
+
+[data-theme="ocean"] {
+  --primary-color: #0ea5e9;
+  --secondary-color: #0284c7;
+  --background-color: rgba(240, 249, 255, 0.95);
+  --surface-color: rgba(240, 249, 255, 0.9);
+}
+
+[data-theme="cosmic"] {
+  --primary-color: #ec4899;
+  --secondary-color: #8b5cf6;
+  --background-color: rgba(15, 23, 42, 0.95);
+  --surface-color: rgba(30, 41, 59, 0.9);
+  --text-color: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --border-color: #475569;
+}
+
+[data-theme="batman"] {
+  --primary-color: #fbbf24;
+  --secondary-color: #f59e0b;
+  --background-color: rgba(17, 24, 39, 0.95);
+  --surface-color: rgba(31, 41, 55, 0.9);
+  --text-color: #f9fafb;
+  --text-secondary: #d1d5db;
+  --border-color: #4b5563;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: transparent;
+  transition: var(--transition);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}

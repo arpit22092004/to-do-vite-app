@@ -1,0 +1,378 @@
+/* Bottom center BATMAN title */
+.batman-title {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffe81f;
+  font-family: 'Impact', 'Arial Black', Arial, sans-serif;
+  font-size: 4rem;
+  letter-spacing: 0.25em;
+  text-shadow: 0 2px 8px #000, 0 0 16px #ffe81f99;
+  z-index: 10;
+  pointer-events: none;
+}
+.batman-theme {
+  background: linear-gradient(180deg, #1f2937 0%, #111827 50%, #000000 100%);
+}
+
+.gotham-sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #374151 0%, #1f2937 30%, #111827 70%, #000000 100%);
+}
+
+.gotham-moon {
+  position: absolute;
+  top: 10%;
+  right: 15%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at 30% 30%, #f9fafb, #d1d5db);
+  border-radius: 50%;
+  box-shadow: 0 0 50px rgba(249, 250, 251, 0.3);
+  animation: moonGlow 8s ease-in-out infinite alternate;
+}
+
+@keyframes moonGlow {
+  0% {
+    box-shadow: 0 0 50px rgba(249, 250, 251, 0.3);
+    opacity: 0.8;
+  }
+  100% {
+    box-shadow: 0 0 80px rgba(249, 250, 251, 0.5);
+    opacity: 1;
+  }
+}
+
+.bat-signal {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 100px;
+  background: radial-gradient(ellipse, rgba(251, 191, 36, 0.8) 0%, rgba(251, 191, 36, 0.4) 40%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: batSignalPulse 4s ease-in-out infinite alternate;
+}
+
+
+/* Remove emoji bat, style SVG logo */
+.bat-logo-svg {
+  display: block;
+  width: 80px;
+  height: 48px;
+  fill: #000;
+  filter: drop-shadow(0 0 8px #fbbf24cc);
+  opacity: 0.85;
+}
+
+@keyframes batSignalPulse {
+  0% {
+    opacity: 0.4;
+    transform: translateX(-50%) scale(1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: translateX(-50%) scale(1.1);
+  }
+}
+
+.gotham-buildings {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+}
+
+.building {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(180deg, #374151 0%, #1f2937 50%, #111827 100%);
+  border-top: 2px solid #4b5563;
+}
+
+.building::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0px,
+    transparent 15px,
+    rgba(75, 85, 99, 0.3) 15px,
+    rgba(75, 85, 99, 0.3) 16px
+  );
+}
+
+.building-1 {
+  left: 0;
+  width: 80px;
+  height: 200px;
+  clip-path: polygon(0 100%, 0 20%, 20% 0%, 80% 0%, 100% 20%, 100% 100%);
+}
+
+.building-2 {
+  left: 70px;
+  width: 100px;
+  height: 250px;
+  clip-path: polygon(0 100%, 0 0%, 100% 0%, 100% 100%);
+}
+
+.building-3 {
+  left: 160px;
+  width: 120px;
+  height: 180px;
+  clip-path: polygon(0 100%, 0 30%, 30% 0%, 70% 0%, 100% 30%, 100% 100%);
+}
+
+.building-4 {
+  right: 150px;
+  width: 90px;
+  height: 220px;
+  clip-path: polygon(0 100%, 0 0%, 100% 0%, 100% 100%);
+}
+
+.building-5 {
+  right: 0;
+  width: 110px;
+  height: 190px;
+  clip-path: polygon(0 100%, 0 25%, 25% 0%, 75% 0%, 100% 25%, 100% 100%);
+}
+
+.flying-bats {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bat {
+  position: absolute;
+  font-size: 1.5rem;
+  color: #000000;
+  animation: batFly 12s linear infinite;
+  opacity: 0.7;
+}
+
+.bat-0 {
+  top: 30%;
+  left: -50px;
+  animation-delay: 0s;
+  animation-duration: 15s;
+}
+
+.bat-1 {
+  top: 40%;
+  left: -50px;
+  animation-delay: -2s;
+  animation-duration: 18s;
+}
+
+.bat-2 {
+  top: 25%;
+  left: -50px;
+  animation-delay: -4s;
+  animation-duration: 12s;
+}
+
+.bat-3 {
+  top: 50%;
+  left: -50px;
+  animation-delay: -6s;
+  animation-duration: 20s;
+}
+
+.bat-4 {
+  top: 35%;
+  left: -50px;
+  animation-delay: -8s;
+  animation-duration: 14s;
+}
+
+.bat-5 {
+  top: 45%;
+  left: -50px;
+  animation-delay: -10s;
+  animation-duration: 16s;
+}
+
+.bat-6 {
+  top: 20%;
+  left: -50px;
+  animation-delay: -12s;
+  animation-duration: 22s;
+}
+
+.bat-7 {
+  top: 55%;
+  left: -50px;
+  animation-delay: -14s;
+  animation-duration: 13s;
+}
+
+@keyframes batFly {
+  0% {
+    transform: translateX(-50px) translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateX(25vw) translateY(-20px) rotate(10deg);
+  }
+  50% {
+    transform: translateX(50vw) translateY(10px) rotate(-5deg);
+  }
+  75% {
+    transform: translateX(75vw) translateY(-15px) rotate(8deg);
+  }
+  100% {
+    transform: translateX(calc(100vw + 50px)) translateY(5px) rotate(0deg);
+  }
+}
+
+.gotham-fog {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(180deg, transparent 0%, rgba(107, 114, 128, 0.3) 50%, rgba(75, 85, 99, 0.5) 100%);
+  animation: fogDrift 10s ease-in-out infinite alternate;
+}
+
+@keyframes fogDrift {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.window-lights {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+}
+
+.window-light {
+  position: absolute;
+  width: 8px;
+  height: 12px;
+  background: rgba(251, 191, 36, 0.8);
+  border-radius: 2px;
+  animation: windowFlicker 4s ease-in-out infinite;
+}
+
+.window-light:nth-child(2n) {
+  animation-delay: 1s;
+  background: rgba(59, 130, 246, 0.6);
+}
+
+.window-light:nth-child(3n) {
+  animation-delay: 2s;
+  background: rgba(239, 68, 68, 0.5);
+}
+
+@keyframes windowFlicker {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* Position window lights */
+.light-0 {
+  bottom: 60%;
+  left: 15px;
+}
+.light-1 {
+  bottom: 45%;
+  left: 25px;
+}
+.light-2 {
+  bottom: 75%;
+  left: 35px;
+}
+.light-3 {
+  bottom: 30%;
+  left: 45px;
+}
+.light-4 {
+  bottom: 85%;
+  left: 85px;
+}
+.light-5 {
+  bottom: 50%;
+  left: 95px;
+}
+.light-6 {
+  bottom: 65%;
+  left: 105px;
+}
+.light-7 {
+  bottom: 40%;
+  left: 115px;
+}
+.light-8 {
+  bottom: 80%;
+  left: 125px;
+}
+.light-9 {
+  bottom: 55%;
+  left: 135px;
+}
+.light-10 {
+  bottom: 70%;
+  left: 175px;
+}
+.light-11 {
+  bottom: 35%;
+  left: 185px;
+}
+.light-12 {
+  bottom: 90%;
+  left: 195px;
+}
+.light-13 {
+  bottom: 25%;
+  left: 205px;
+}
+.light-14 {
+  bottom: 60%;
+  left: 215px;
+}
+.light-15 {
+  bottom: 45%;
+  left: 225px;
+}
+.light-16 {
+  bottom: 75%;
+  left: 235px;
+}
+.light-17 {
+  bottom: 50%;
+  left: 245px;
+}
+.light-18 {
+  bottom: 65%;
+  left: 255px;
+}
+.light-19 {
+  bottom: 80%;
+  left: 265px;
+}
