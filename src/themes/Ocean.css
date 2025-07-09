@@ -33,12 +33,12 @@
 .bird-1 {
   top: 10px;
   left: 0;
-  animation-delay: 0s;
+  animation-delay: 6s;
 }
 .bird-2 {
   top: 30px;
   left: 60px;
-  animation-delay: -4s;
+  animation-delay: -3s;
 }
 .bird-3 {
   top: 20px;

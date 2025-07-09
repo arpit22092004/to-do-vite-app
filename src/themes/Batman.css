@@ -4,7 +4,7 @@
   bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
-  color: #ffe81f;
+  color: #fec300;
   font-family: 'Impact', 'Arial Black', Arial, sans-serif;
   font-size: 4rem;
   letter-spacing: 0.25em;
@@ -282,7 +282,7 @@
 
 .window-light:nth-child(3n) {
   animation-delay: 2s;
-  background: rgba(239, 68, 68, 0.5);
+  background: rgb(241, 206, 4);
 }
 
 @keyframes windowFlicker {
